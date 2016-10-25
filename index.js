@@ -1,3 +1,4 @@
+//index.js
 var restify=require('restify');
 var router=require('./route.js');
 var user=require('./user.js');
@@ -20,9 +21,14 @@ server.use(restify.jsonp());
 
 router.route(server,{
   '获取精灵坐标':{
-    'path':'/sprites',
+    'path':'/coordinates',
     'method':'post',
-    'respond':user.getspritelocation
+    'respond':user.getSpriteLocation
+  },
+  '标记精灵':{
+    'path':'/marksprite',
+    'method':'post',
+    'respond':user.setSpriteExist
   }
 });
 
