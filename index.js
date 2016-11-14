@@ -32,9 +32,19 @@ router.route(server,{
   }
 });
 
+//test http
 server.get('/',function(req,res,next){
   console.log(req); 
   res.send('success');
   return next();
 
 });
+
+//test
+function test(){
+  console.log('its test from index.js');
+}
+
+module.exports={
+  test:test
+};

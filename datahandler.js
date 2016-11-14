@@ -5,7 +5,7 @@ function sendSuccess(res,result){
   });
 }
 
-function sendFailed(res,result){
+function sendFailed(res,reason){
   res.send({
     'result':false,
     'reason':reason

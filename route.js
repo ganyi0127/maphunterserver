@@ -5,6 +5,7 @@ function route(server,url_map){
     method = config.method;
     respond = config.respond;
 		server[method](path, respond);
+    console.log(respond);
 	}
   console.log('route complete');
 }
